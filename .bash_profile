@@ -1,7 +1,16 @@
 # My Mac Should have the following enabled for purdy colors
-#export CLICOLOR=1
-#export LSCOLORS=GxFxCxDxBxegedabagaced
-#export TERM="xterm-color"
+
+if hash uname 2>&-; then
+  os_type=`uname -s`
+else
+  os_type="unknown"
+fi
+
+if [[ $os_type == "Darwin" ]]; then
+  export CLICOLOR=1
+  export LSCOLORS=GxFxCxDxBxegedabagaced
+  export TERM="xterm-color"
+fi
 
 # https://github.com/git/git/blob/master/contrib/completion/git-completion.bash
 source $HOME/bin/git-completion.bash
