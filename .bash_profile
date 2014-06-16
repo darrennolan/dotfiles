@@ -1,5 +1,3 @@
-# My Mac Should have the following enabled for purdy colors
-
 if hash uname 2>&-; then
   os_type=`uname -s`
 else
